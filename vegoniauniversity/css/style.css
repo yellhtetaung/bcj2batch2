@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
 :root {
     --primary-color: darkviolet;
+    --secondary-color: darkblue;
+    --primary-grad-color: linear-gradient(to left, darkviolet, deepskyblue);
 }
 
 * {
@@ -7,6 +11,8 @@
 }
 
 body {
+    font-family: 'Source Sans Pro', sans-serif;
+
     padding: 0;
     margin: 0;
 }
@@ -41,4 +47,169 @@ body {
 }
 
 /* End Header Intro */
+
+header {
+    height: 80vh;
+    background: var(--primary-grad-color);
+
+    position: relative;
+}
+
+/* Start Nav Bar */
+.menustyles li a {
+    color: #000;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+
+    transition: color .5s;
+}
+
+.menustyles li a:hover {
+    color: var(--primary-color);
+}
+
+.navbuttons {
+    border: none;
+}
+
+.navbuttons:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.lines1,
+.lines2,
+.lines3 {
+    width: 17px;
+    height: 2px;
+    margin: 3px;
+}
+
+.crossxs .lines1 {
+    transform: rotate(-45deg) translate(-3px, 4px);
+}
+
+.crossxs .lines2 {
+    opacity: 0;
+}
+
+.crossxs .lines3 {
+    transform: rotate(45deg) translate(-3px, -4px);
+}
+
+/* End Nav Bars */
+
+/* Start banner */
+.banners {
+    width: 90%;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.bannerheaders {
+    font-weight: bold;
+    letter-spacing: 3px;
+    animation-name: bnanis;
+    animation-duration: 2s;
+}
+
+.bannerparagraphs,
+.banner-btn {
+    animation-name: bnanis;
+    animation-duration: 2s;
+    animation-delay: .5s;
+
+    animation-fill-mode: backwards;
+}
+
+@keyframes bnanis {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* End banner */
+
+.studentgroups {
+    width: 50%;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    z-index: 1;
+}
+
+.waves {
+    width: 100%;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    z-index: 2;
+}
+
 /* End Header Section */
+
+/* Start Students Counter Section */
+.counters {
+    width: 100%;
+    height: 20vh;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counteritems {
+    width: 25%;
+    text-align: center;
+
+    float: left;
+
+    border-right: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.counteritems:last-child {
+    border-right: none;
+}
+
+.counteritems .fas {
+    background: var(--primary-grad-color);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.counteritems h5 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* End Students Counter Section */
+
+/* Start About Us Section */
+.aboutuss {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/img/banner/banner4.jpg');
+    background-repeat: no-repeat;
+}
+
+.aboutuss ul li {
+    list-style-type: none;
+    background-color: var(--secondary-color);
+    margin: 20px 0;
+}
+
+/* End About Us Section */
