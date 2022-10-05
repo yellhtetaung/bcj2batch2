@@ -17,6 +17,42 @@
 
 <body>
 
+  <!-- Start Stick Note -->
+  <div class="sticknotes">
+    <a href="#aboutuss" class="aboutus">About</a>
+    <a href="#faq" class="page">Pages</a>
+    <a href="#locations" class="new">News</a>
+    <a href="#subscribe" class="contact">Contact</a>
+  </div>
+  <!-- End Stick Note -->
+
+  <!-- Start Login Box -->
+  <button id="openform" class="open-btn"><i class="fas fa-user"></i></button>
+  <div id="form-popup" class="form-popup">
+    <form class="form-container" action="" method="">
+      <h6>Login Here</h6>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" class="" placeholder="Enter Email" autocomplete="off" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" class="" placeholder="Enter Password" autocomplete="off"
+          required />
+      </div>
+
+      <div class="d-grid">
+        <button type="submit" class="btn btn-info btn-sm rounded-0 mb-2">Login</button>
+        <button type="button" id="formclose-btn" class="btn btn-danger btn-sm rounded-0 mb-2">Close</button>
+      </div>
+    </form>
+  </div>
+  <!-- End Login Box -->
+
+
+
   <!-- Start Header Section -->
   <header>
     <!-- Start Header Intro -->
@@ -56,13 +92,13 @@
 
       <div id="mynav" class="navbar-collapse collapse justify-content-end text-uppercase fw-bolder mx-3">
         <ul class="navbar-nav menustyles">
-          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">ShortCode</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Structure</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Pages</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">News</a></li>
-          <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#aboutuss" class="nav-link">About Us</a></li>
+          <li class="nav-item"><a href="#faculties" class="nav-link">ShortCode</a></li>
+          <li class="nav-item"><a href="#features" class="nav-link">Feature</a></li>
+          <li class="nav-item"><a href="#faq" class="nav-link">Pages</a></li>
+          <li class="nav-item"><a href="#locations" class="nav-link">News</a></li>
+          <li class="nav-item"><a href="#subscribe" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </nav>
@@ -115,7 +151,7 @@
   <!-- End Students Counter Section -->
 
   <!-- Start About Us Section -->
-  <section class="py-5 aboutuss">
+  <section class="py-5 aboutuss" id="aboutuss">
     <div class="container">
       <div class="row">
         <div class="col-sm-6"></div>
@@ -918,11 +954,20 @@
         </div>
 
       </div>
+
+      <div class="container">
+        <div class="text-light d-flex justify-content-between border-top pt-4">
+          <p>copyright &copy; <span id="getyear"></span> <a href="#" class="text-danger">Pro</a> All rights reserved.
+          </p>
+
+          <ul class="list-unstyled">
+            <li><a href="#"><i class="fas fa-angle-up backtotop-btn"></i></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </footer>
   <!-- End Footer Section -->
-
-
 
 
   <!-- bootstrap css1 js1 -->

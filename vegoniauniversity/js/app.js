@@ -3,27 +3,37 @@
 $(document).ready(function () {
   // Start Header
   // Start Nav Bar
-  $(".navbuttons").click(function () {
-    $(this).toggleClass("crossxs");
+  $('.navbuttons').click(function () {
+    $(this).toggleClass('crossxs');
   });
   // End Nav Bar
   // End Header
+
+  // Start Login Box
+  $('#openform').click(function () {
+    document.getElementById('form-popup').style.display = 'block';
+  });
+
+  $('#formclose-btn').click(function () {
+    document.getElementById('form-popup').style.display = 'none';
+  });
+  // End Login Box
 });
 
 // End Jquery Area
 
 // Start Javascript Area
 // Start Counter Section
-var getcountervalues = document.querySelectorAll(".countervalues");
+var getcountervalues = document.querySelectorAll('.countervalues');
 getcountervalues.forEach(function (getcountervalue) {
   // console.log(getcountervalue);
 
-  getcountervalue.textContent = "0";
+  getcountervalue.textContent = '0';
 
   const updatecounter = function () {
     // console.log("i am working");
 
-    const getcttarget = +getcountervalue.getAttribute("data-target");
+    const getcttarget = +getcountervalue.getAttribute('data-target');
     // console.log(getcttarget);
     // console.log(typeof getcttarget, getcttarget);
 
@@ -46,21 +56,21 @@ getcountervalues.forEach(function (getcountervalue) {
 // Start Rating Section
 
 // start google code for chart
-google.charts.load("current", { packages: ["corechart"] });
+google.charts.load('current', { packages: ['corechart'] });
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-    ["Task", "Hours per Day"],
-    ["Myanmar", 8],
-    ["Thailand", 2],
-    ["Signapore", 4],
-    ["Indonesia", 2],
-    ["Srilanka", 8],
+    ['Task', 'Hours per Day'],
+    ['Myanmar', 8],
+    ['Thailand', 2],
+    ['Signapore', 4],
+    ['Indonesia', 2],
+    ['Srilanka', 8],
   ]);
 
   var options = {
-    title: "International Students",
+    title: 'International Students',
     // is3D: true,
     // pieHole: 0.2,
     width: 550,
@@ -68,7 +78,7 @@ function drawChart() {
   };
 
   var chart = new google.visualization.PieChart(
-    document.getElementById("piechart")
+    document.getElementById('piechart')
   );
 
   chart.draw(data, options);
@@ -76,5 +86,9 @@ function drawChart() {
 
 // end google code for chart
 // End Rating Section
+
+const getyear = document.getElementById('getyear');
+const getfullyear = new Date().getUTCFullYear();
+getyear.textContent = getfullyear;
 
 // End Javascript Area
