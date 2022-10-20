@@ -10,12 +10,14 @@ body {
 
 /*Start Header Section*/
 header {
-  height: 60vh;
-  background-image: linear-gradient(steelblue, lightskyblue);
+  height: 95vh;
+  /* background-image: url(../assets/img/banner/banner8.jpg); */
   background-repeat: no-repeat;
   background-position: center;
 
   position: relative;
+
+  transition: all 2s linear;
 }
 
 /*Start Nav Bar*/
@@ -26,6 +28,62 @@ header {
 .nav-link {
   font-size: 16px;
   color: #fff !important;
+}
+
+.navbar-toggler,
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  border: none;
+  box-shadow: none;
+}
+
+.dropdowns {
+  position: relative;
+}
+
+.dropbtn:hover {
+  background: none !important;
+}
+
+.dropdown-contents {
+  width: 230px;
+  background: #f6f6f6;
+  display: none;
+
+  position: absolute;
+
+  z-index: 10;
+}
+
+.dropdown-contents .search {
+  width: 100%;
+  background-image: url('../assets/img/icon/searchicon.png');
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  border: none;
+  border-bottom: 1px solid #ddd;
+
+  padding: 10px 5px 10px 40px;
+}
+
+.dropdown-contents .search:focus {
+  outline: 0;
+}
+
+.dropdown-contents a {
+  color: #000;
+  display: block;
+  text-decoration: none;
+
+  padding: 10px;
+}
+
+.dropdowns a:hover {
+  background-color: #ddd;
+}
+
+.dropdown-contents.show {
+  display: block;
 }
 
 /* End Nav Bar */
@@ -44,6 +102,36 @@ header {
   transform: translate(-50%, -50%);
 }
 
+.bannerheaders {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
+  box-shadow: 10px 10px 100px 20px #000;
+  border: 2px dashed #fff;
+  padding: 20px;
+
+  animation-name: baani;
+  animation-duration: 2s;
+}
+
+.bannerparagraphs {
+  animation-name: baani;
+  animation-duration: 2s;
+  animation-delay: 2s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes baani {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
 /* End Banner Section */
 
-/*End Header Section*/ ;
+/*End Header Section*/
+;
